@@ -49,18 +49,30 @@ and run from the command line:
 
     pip3 install .
 
+## Setting up ML-Agent within Unity
+
+1. Open Unity and use it to open folder `ml-agents`/`unity-environment`. 
+2. Go to `Edit` -> `Project Settings` -> `Player`
+3. For each of the platforms you target 
+(**`PC, Mac and Linux Standalone`**, **`iOS`** or **`Android`**):
+    1. Go into `Other Settings`.
+    2. Select `Scripting Runtime Version` to 
+    `Experimental (.NET 4.6 Equivalent)`
+    3. In `Scripting Defined Symbols`, add the flag `ENABLE_TENSORFLOW`. 
+    After typing in, press Enter.
+4. Go to `File` -> `Save Project`
+5. Restart the Unity Editor.
+
+## Setting up TensorflowSharp Support
+
+[Download](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage) TensorflowSharp plugin, and import it into Unity once downloaded by double clicking on it.  You can see if it was successfully imported by checking the TensorFlow files in the Project window under `Assets` -> `ML-Agents` -> `Plugins` -> `Computer`. 
+
+**Note**: If you don't see anything under `Assets`, drag the `ml-agents`/`unity-environment`/`Assets`/`ML-Agents` folder under `Assets` within Project window.
+
 ## Docker-based Installation (Experimental)
 
 If you'd like to use Docker for ML-Agents, please follow 
 [this guide](Using-Docker.md). 
-
-## Unity Packages
-
-You can download ML-Agents as Unity Packages:
-
- * [ML-Agents with TensorflowSharp Plugin](https://s3.amazonaws.com/unity-ml-agents/0.3/ML-AgentsWithPlugin.unitypackage)
- * [ML-Agents without TensorflowSharp Plugin](https://s3.amazonaws.com/unity-ml-agents/0.3/ML-AgentsNoPlugin.unitypackage)
- * [TensorflowSharp Plugin Only](https://s3.amazonaws.com/unity-ml-agents/0.3/TFSharpPlugin.unitypackage)
 
 ## Help
 
@@ -68,3 +80,5 @@ If you run into any problems installing ML-Agents,
 [submit an issue](https://github.com/Unity-Technologies/ml-agents/issues) and
 make sure to cite relevant information on OS, Python version, and exact error 
 message (whenever possible). 
+
+
